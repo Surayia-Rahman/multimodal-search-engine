@@ -76,3 +76,30 @@ To scale this prototype into an industrial, million-item production ecosystem, t
 * **Problem:** Interactive command-line loops are excellent for developer validation, but are inaccessible to end-users and product stakeholders.
 * **Solution:** Build an asynchronous **FastAPI** backend service wrapped in an elegant **Streamlit** front-end user interface. This web application will display responsive product layout cards, live match-score badges, and side-by-side search results.
 
+## 📊 Empirical Evaluation & Search Results
+
+The vector framework was tested across two separate data phases to validate its mathematical accuracy and performance under scale.
+
+### Phase 1: Controlled Mock Data Validation
+* **Query Evaluated:** `"something to protect my eyes outside during gym workouts"`
+* **Dataset Size:** 10 curated test rows
+* **System Performance:** The engine successfully isolated semantic concepts (mapping "protect eyes" to Sunglasses and "gym workouts" to Sports) without needing keyword matching.
+
+| Product ID | Product Title | Category | Cosine Similarity Score |
+| :--- | :--- | :--- | :--- |
+| **PROD_010** | Polarized Sports Sunglasses | Accessories | **0.4581** (Top Match) |
+| **PROD_009** | Activewear Training Shorts | Apparel | 0.3024 (Filtered) |
+
+---
+
+### Phase 2: Production Scale Real-World Test
+* **Query Evaluated:** `"companies experiencing heavy losses or filing for bankruptcy protection"`
+* **Dataset Size:** 1,000 real market data records
+* **System Performance:** The matrix transformations mapped the financial concept of "heavy losses" directly to massive dollar deficits and contextual corporate distress across different commercial entities instantly on the T4 GPU.
+
+| Record ID | Context / Title | Category | Cosine Similarity Score |
+| :--- | :--- | :--- | :--- |
+| **MKT_0448** | Bankruptcy fears as Yukos half-year loss hits $2.65bn | Business & Retail | **0.5695** (Top Match) |
+| **MKT_0794** | US Airways' Grim Warning | Business & Retail | **0.5250** (High Relevance) |
+| **MKT_0380** | Air Canada Creditors Clear Carrier's Bankruptcy Plan | Business & Retail | **0.4730** (Relevant Context) |
+
