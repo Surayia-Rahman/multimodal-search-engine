@@ -11,8 +11,6 @@ multimodal-search-engine/
 ├── data/
 │   ├── raw/            # Ingested Parquet catalog subsets
 │   └── processed/      # Compiled 384-dimensional vector data layers
-├── notebooks/
-│   └── semantic_search_prototype.ipynb  # Prototyping & experimental workflow
 ├── src/
 │   ├── __init__.py
 │   ├── embedder.py     # GPU-accelerated embedding generation layer
@@ -20,6 +18,7 @@ multimodal-search-engine/
 └── README.md
 
 ```
+The python file serves as the interactive prototyping and evaluation environment for building our core semantic search engine pipeline.
 
 ---
 
